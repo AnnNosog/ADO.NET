@@ -1,0 +1,31 @@
+﻿<Window x:Class="Homework_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="447" Width="687.5">
+    <!--<WrapPanel Orientation="Vertical">
+        <Button x:Name="btn_connect" Content="Connect server" HorizontalAlignment="Left" Height="33" Margin="40,30,0,0" VerticalAlignment="Top" Width="155" Click="btn_connect_Click"/>
+        <Button x:Name="btn_disconnection" Content="Disconnection" HorizontalAlignment="Left" Height="33" Margin="40,30,0,0" VerticalAlignment="Top" Width="155" Click="btn_disconnection_Click"/>
+    </WrapPanel>-->
+
+    <Grid Margin="0,0,2,3">
+        <Button x:Name="btn_connect" Content="Connect server" HorizontalAlignment="Left" Height="33" Margin="40,30,0,0" VerticalAlignment="Top" Width="150" Click="btn_connect_Click"/>
+        <Button x:Name="btn_disconnection" Content="Disconnection" HorizontalAlignment="Left" Height="33" Margin="40,90,0,0" VerticalAlignment="Top" Width="150" Click="btn_disconnection_Click"/>
+        <Label x:Name="lbl_connect" Content="" HorizontalAlignment="Left" Height="27" Margin="340,0,0,0" VerticalAlignment="Top" Width="120" FontSize="14"/>
+
+
+        <ComboBox x:Name="cmb_request"
+                  DisplayMemberPath="Key"
+                  HorizontalAlignment="Left" Height="25"
+                  IsEnabled="False"
+                  Margin="275,45,0,0" VerticalAlignment="Top" Width="333"
+                  SelectionChanged="cmb_request_SelectionChanged"/>
+
+        <ListBox x:Name="lb_output" HorizontalAlignment="Left" Height="230" Margin="275,90,0,0" VerticalAlignment="Top" Width="333"/>
+
+
+    </Grid>
+
+</Window>
