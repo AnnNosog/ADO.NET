@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="CaloricChoice" Height="180" Width="190" Closing="Window_Closing">
     <Grid>
-        <TextBox x:Name="tb_caloric" HorizontalAlignment="Left" Height="25" Margin="70,20,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" TextChanged="tb_caloric_TextChanged"/>
-        <TextBox x:Name="tb_caloricFrom" IsEnabled="False" HorizontalAlignment="Left" Height="25" Margin="70,60,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" TextChanged="tb_caloricFrom_TextChanged" />
+        <TextBox x:Name="tb_caloric" PreviewTextInput = "tb_caloric_PreviewTextInput" HorizontalAlignment="Left" Height="25" Margin="70,20,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" TextChanged="tb_caloric_TextChanged"/>
+        <TextBox x:Name="tb_caloricFrom" PreviewTextInput = "tb_caloric_PreviewTextInput" IsEnabled="False" HorizontalAlignment="Left" Height="25" Margin="70,60,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" TextChanged="tb_caloricFrom_TextChanged" />
         <CheckBox x:Name="chk_from" Content="До" HorizontalAlignment="Left" Height="25" Margin="25,60,0,0" VerticalAlignment="Top" Width="40" Checked="chk_from_Checked"/>
         <Button x:Name="button" Content="Ok" HorizontalAlignment="Left" Height="21" Margin="51,104,0,0" VerticalAlignment="Top" Width="89" Click="button_Click"/>
 

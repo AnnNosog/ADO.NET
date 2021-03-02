@@ -5,7 +5,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-
 using System.Windows.Media;
 
 
@@ -116,9 +115,24 @@ namespace Homework_01
 
             int countField = rdr.FieldCount;
 
+            if (selectedItem.Key == requests.GetRequestsList.ElementAt(13).Key)
+            {
+                do
+                {
+                    while (rdr.Read())
+                    {
+                        lb_output.Items.Add($"{rdr[0]} - {rdr[1]}");                        
+                    }
+
+                } while (rdr.NextResult());
+
+                rdr.Close();
+
+                return;
+            }
+
             while (rdr.Read())
             {
-
                 if (countField == 1)
                 {
                     lb_output.Items.Add(rdr[0]);

@@ -23,7 +23,7 @@ namespace Homework_01
                 ["Овощи и фрукты с калорийностью ниже указанной"] = "SELECT Name, Caloric FROM Info_Vegetables_fruits Where Caloric < {0}",
                 ["Овощи и фрукты с калорийностью выше указанной"] = "SELECT Name, Caloric FROM Info_Vegetables_fruits Where Caloric > {0}",
                 ["Овощи и фрукты с калорийностью в указанном диапазоне"] = "SELECT Name, Caloric FROM Info_Vegetables_fruits Where Caloric > {0} AND Caloric < {1}",
-                ["Овощи и фрукты, у которых цвет желтый или красный"] = "SELECT Name FROM Info_Vegetables_fruits Where Color = 'yellow' OR Color = 'red'"
+                ["Овощи и фрукты, у которых цвет желтый или красный"] = "SELECT Name, Color FROM Info_Vegetables_fruits Where Color = 'yellow'; SELECT Name, Color FROM Info_Vegetables_fruits Where Color = 'red'"
             };
         }
 
