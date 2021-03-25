@@ -61,7 +61,7 @@ namespace Homework_01
             lbl_connect.Content = "Disconnect";
         }
 
-        private void cmb_request_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void cmb_request_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox comboBox = (ComboBox)sender;
             KeyValuePair<string, string> selectedItem = (KeyValuePair<string, string>)comboBox.SelectedItem;
@@ -73,7 +73,7 @@ namespace Homework_01
             if (selectedItem.Key == requests.GetRequestsList.ElementAt(8).Key)
             {
                 cmd = new SqlCommand($"Select Color FROM Info_Vegetables_fruits Group by Color", connection);
-                rdr = cmd.ExecuteReader();
+                rdr = await cmd.ExecuteReaderAsync();
 
                 var colorChoice = new ColorChoice(rdr);
                 colorChoice.ShowDialog();
@@ -111,7 +111,7 @@ namespace Homework_01
             lb_output.Items.Clear();
 
             cmd = new SqlCommand(request, connection);
-            rdr = cmd.ExecuteReader();
+            rdr = await cmd.ExecuteReaderAsync();
 
             int countField = rdr.FieldCount;
 
